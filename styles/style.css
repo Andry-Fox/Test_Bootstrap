@@ -78,7 +78,8 @@
 
 /* Фон */
 .bg {
-    background-image: url(../images/burger2.svg);
+    background-color: #edeac9;
+    /* background-image: url(../images/burger2.svg); */
     background-size: 100%;
     height: 100%;
 }

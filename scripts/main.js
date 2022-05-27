@@ -54,4 +54,42 @@ function addItem () {
 }
 
 
+function addItemToHot () {
+    let div_card_menu_hot = document.createElement('div');
+    div_card_menu_hot.className = "card card-menu";
+
+    let img_card_hot = document.createElement('img')
+    img_card_hot.src = "images/burgimgs.png";
+    img_card_hot.className = "card-img-top";
+
+    let div_card_hot = document.createElement('div');
+    div_card_hot.className = "card-body";
+
+    let card_title_hot = document.createElement('h5')
+    card_title_hot.className = "card-title";
+    card_title_hot.innerHTML = "Lorem ipsum dolor"
+
+    let button_card_menu_hot = document.createElement('button');
+    button_card_menu_hot.type = "button";
+    button_card_menu_hot.className = "btn btn-custom rounded-pill btn-warning position-absolute top-50 start-50 translate-middle";
+    button_card_menu_hot.innerHTML = "Add to basket";
+
+    let card_text_hot = document.createElement('p')
+    card_text_hot.className = "card-text";
+    card_text_hot.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam aliquam facere nesciunt."
+
+    div_card_menu_hot.prepend(img_card_hot);
+    div_card_menu_hot.append(div_card_hot);
+    div_card_hot.prepend(card_title_hot);
+    card_title_hot.after(card_text_hot);
+    div_card_hot.append(button_card_menu_hot);
+    hot.append(div_card_menu_hot);
+}
+
+function goCount() {
+let count = document.getElementById('hot_count')
+for (let i = count.value ; i > 0; i--) {
+    addItemToHot()
+}};
+
 // div_card_menu.innerHTML = Наполнение 
