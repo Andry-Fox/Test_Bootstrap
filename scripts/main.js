@@ -35,7 +35,5 @@ card_title.after(card_text);
 cardBody.append(button_card_menu);
 }
 
-addcard ()
-addcard ()
 
 // div_card_menu.innerHTML = Наполнение 
