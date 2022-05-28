@@ -21,7 +21,7 @@
 // card_text.className = "card-text";
 // card_text.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam aliquam facere nesciunt."
 
-function addItem () {
+function addItem() {
     let div_card_menu = document.createElement('div');
     div_card_menu.className = "card card-menu";
 
@@ -54,7 +54,7 @@ function addItem () {
 }
 
 
-function addItemToHot () {
+function addItemToHot() {
     let div_card_menu_hot = document.createElement('div');
     div_card_menu_hot.className = "card card-menu";
 
@@ -87,9 +87,23 @@ function addItemToHot () {
 }
 
 function goCount() {
-let count = document.getElementById('hot_count')
-for (let i = count.value ; i > 0; i--) {
-    addItemToHot()
-}};
+    let count = document.getElementById('hot_count')
+    for (let i = count.value; i > 0; i--) {
+        addItemToHot()
+    }
+};
 
+
+
+
+
+
+$(function () {
+    $('#hot-button').click(function () {
+        let count = document.getElementById('hot_count')
+        for (let i = count.value; i > 0; i--) {
+            $('#hot').append(' <div class="card card-menu"><img src="images/burgimgs.png" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Lorem, ipsum dolor.</h5><p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosamaliquam facere nesciunt.</p><button type="button"class="btn btn-custom rounded-pill btn-warning position-absolute top-50 start-50 translate-middle"data-bs-toggle="modal" data-bs-target="#exampleModal">Add to basket</button></div>')
+        }
+    })
+})
 // div_card_menu.innerHTML = Наполнение 
